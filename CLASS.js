@@ -21,7 +21,6 @@
 // console.log(dog.dogcolor);
 // console.log(dog.dogbreed);
 
-
 // Constructor characteristics
 
 // 1. Constructor name should be capitalized
@@ -36,7 +35,7 @@
 //     constructor(prop1,prop2){
 //         this.prop1=prop1;
 //         this.prop2=prop2;
-    
+
 //     }
 // }
 // let obj=new Classname("value1","value2");
@@ -62,7 +61,7 @@
 // console.log(dog1.dogcolor);
 // console.log(dog1.dogbreed);
 // console.log(dog1.dogweight);
-// this is used for object creation 
+// this is used for object creation
 // It  is convention to  start the classanme in capitalization
 // class person{
 //     constructor(firstname,lastname){
@@ -147,7 +146,7 @@
 // it means reusability of code, matlb aisa code jo sari class me comon ho
 // it is a concept that allows a class to inherit the properties and methods of another class
 // it is used to create a new class from an existing class
- 
+
 // class vehicle{
 //     constructor(brand,model,year){
 //         this.brand=brand;
@@ -172,8 +171,37 @@
 //     }
 // }
 
-let motorcycle  = new motorcycle("red",0,10,"gasoline");
-console.log(motorcycle.color);
-motorcycle.move();
-motorcycle.accelerate(20);   
- 
+// let motor  = new motorcycle("red",0,10,"gasoline");
+// console.log(motor.color);
+// motor.accelerate(20);
+// motor.move();
+
+// class person {
+//   constructor(firstname, lastname) {
+//     this.firstname = firstname;
+//     this.lastname = lastname;
+//   }
+//   greet() {
+//     console.log("Hello", this.firstname, this.lastname, "Nice to meet you");
+//   }
+// }
+
+//PROtotypes
+// It is a property of the object which is used to add new properties and methods to the object
+// It is used to add new properties and methods to the object without modifying the object itself
+
+class person {
+  constructor(firstname, lastname) {
+    this.firstname = firstname;
+    this.lastname = lastname;
+  }
+  greet() {
+    console.log("Hello", this.firstname, this.lastname, "Nice to meet you");
+  }
+}
+
+person.prototype.introduce = function () {
+  console.log("Hi", this.firstname, "Nice to meet you");
+}
+let p=new person("Nishkarsh", "Pandey");
+
